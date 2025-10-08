@@ -7,13 +7,14 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import SupplierProfile from "./pages/SupplierProfile";
 import ContactSupplier from "./pages/ContactSupplier";
+import AquacultureCategories from "./pages/AquacultureCategories";
 
 
 function Layout() {
   const location = useLocation();
 
   // On cache la navbar et le footer sur /login et /register
-  const hideLayout = ["/login", "/register"].includes(location.pathname);
+  const hideLayout = ["/login", "/register" , "/aquaculture/categories"].includes(location.pathname);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -25,6 +26,7 @@ function Layout() {
           <Route path="/register" element={<Register />} />
           <Route path="/supplier/:id" element={<SupplierProfile />} />
           <Route path="/supplier/:id/contact" element={<ContactSupplier />} />
+          <Route path="/aquaculture/categories" element={<AquacultureCategories />} />
 
         </Routes>
       </main>
