@@ -16,7 +16,7 @@ const Home = () => {
           title="Aquaculture"
           description="Explore a wide range of products including fish, feed, basins, and equipment for all your aquaculture needs."
           icon={<Droplet className="text-sky-600 w-10 h-10" />}
-          link="/aquaculture/categories"
+          link="/aquaculture/products"
         />
         <CategoryCard
           title="Agriculture"
