@@ -15,6 +15,9 @@ import OrderConfirmation from "./pages/OrderConfirmation";
 import Listings from "./pages/Listings";
 import Dashboard from "./pages/Dashboard";
 import Orders from "./pages/Orders";
+import Messages from "./pages/Messages";
+import AccountSettings from "./pages/AccountSettings";
+import AddListing from "./pages/AddListing";
 
 
 function Layout() {
@@ -29,7 +32,10 @@ function Layout() {
     location.pathname === "/listings" ||
     location.pathname === "/dashboard" ||
     location.pathname === "/orders" ||
-    location.pathname.startsWith("/aquaculture/products");
+    location.pathname === "/messages" ||
+    location.pathname === "/account" ||
+    location.pathname.startsWith("/aquaculture/products") ||
+    location.pathname.startsWith("/listings");
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -47,8 +53,11 @@ function Layout() {
           <Route path="/cart/checkout" element={<Checkout />} />
           <Route path="/cart/checkout/confirm" element={<OrderConfirmation />} />
           <Route path="/listings" element={<Listings />} />
+          <Route path="/listings/add-new-listing" element={<AddListing />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/orders" element={<Orders />} />
+          <Route path="/messages" element={<Messages />} />
+          <Route path="/account" element={<AccountSettings />} />
         </Routes>
       </main>
       {!hideLayout && <Footer />}

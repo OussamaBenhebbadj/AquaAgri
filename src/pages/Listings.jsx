@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Plus, Edit2, Eye, Trash2 } from 'lucide-react';
 import HeaderSuppliers from '../components/HeaderSuppliers';
 
@@ -44,10 +45,13 @@ const Listings = () => {
         {/* Title Section */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
           <h1 className="text-4xl font-bold text-gray-900">My Listings</h1>
-          <button className="w-full sm:w-auto bg-emerald-500 text-white px-6 py-3 rounded-lg hover:bg-emerald-600 transition flex items-center justify-center gap-2 font-medium">
-            <Plus size={20} />
-            Add New Listing
-          </button>
+          <Link to="/listings/add-new-listing">
+            <button className="w-full sm:w-auto bg-emerald-500 text-white px-6 py-3 rounded-lg hover:bg-emerald-600 transition flex items-center justify-center gap-2 font-medium">
+              <Plus size={20} />
+              Add New Listing
+            </button>
+          </Link>
+          
         </div>
 
         {/* Search and Filters */}

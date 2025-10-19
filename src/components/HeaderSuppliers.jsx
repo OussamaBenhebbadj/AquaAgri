@@ -35,7 +35,7 @@ const HeaderSuppliers = () => {
           <NavLink to="/dashboard">Dashboard</NavLink>
           <NavLink to="/orders">Orders</NavLink>
           <NavLink to="/listings">Listings</NavLink>
-          <NavLink to="/support">Support</NavLink>
+          <NavLink to="/messages">Messages</NavLink>
         </div>
 
         {/* Right Side - Notifications & Profile */}
@@ -43,7 +43,10 @@ const HeaderSuppliers = () => {
           <button className="p-2 hover:bg-gray-100 rounded-lg transition">
             <Bell size={20} className="text-gray-600" />
           </button>
-          <div className="w-10 h-10 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-full cursor-pointer hover:opacity-90 transition"></div>
+          <Link to="/account">
+            <div className="w-10 h-10 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-full cursor-pointer hover:opacity-90 transition"></div>
+          </Link>
+         
         </div>
       </div>
     </nav>
