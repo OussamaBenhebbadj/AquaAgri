@@ -80,13 +80,14 @@ const OrderConfirmation = () => {
 
         {/* Buttons */}
         <div className="bg-green-50 flex flex-col sm:flex-row items-center justify-center gap-4 px-8 py-6 border-t">
-          <button
-            onClick={() => navigate("/order-details")}
-            className="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white font-medium px-5 py-2.5 rounded-lg transition"
-          >
-            View Order Details
-          </button>
-
+          <Link to="/orders-history">
+            <button
+                onClick={() => navigate("/order-details")}
+                className="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white font-medium px-5 py-2.5 rounded-lg transition"
+              >
+                View Order History
+            </button>
+          </Link>
           <Link to="/aquaculture/products">
             <button className="w-full sm:w-auto bg-white border border-gray-300 hover:bg-gray-100 text-gray-700 font-medium px-5 py-2.5 rounded-lg transition">
                 Continue Shopping

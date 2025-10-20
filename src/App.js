@@ -18,6 +18,9 @@ import Orders from "./pages/Orders";
 import Messages from "./pages/Messages";
 import AccountSettings from "./pages/AccountSettings";
 import AddListing from "./pages/AddListing";
+import OrdersHistory from "./pages/OrdersHistory";
+import OrderClientDetails from "./pages/OrderClientDetails";
+import ForgotPassword from "./pages/ForgotPassword";
 
 
 function Layout() {
@@ -35,6 +38,8 @@ function Layout() {
     location.pathname === "/messages" ||
     location.pathname === "/account" ||
     location.pathname.startsWith("/aquaculture/products") ||
+    location.pathname.startsWith("/orders-history") ||
+    location.pathname.startsWith("/login") ||
     location.pathname.startsWith("/listings");
 
   return (
@@ -44,6 +49,7 @@ function Layout() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/login/forgotpassword" element={<ForgotPassword />} />
           <Route path="/register" element={<Register />} />
           <Route path="/supplier/:id" element={<SupplierProfile />} />
           <Route path="/supplier/:id/contact" element={<ContactSupplier />} />
@@ -52,6 +58,8 @@ function Layout() {
           <Route path="/cart" element={<MyCart />} />
           <Route path="/cart/checkout" element={<Checkout />} />
           <Route path="/cart/checkout/confirm" element={<OrderConfirmation />} />
+          <Route path="/orders-history" element={<OrdersHistory />} />
+          <Route path="/orders-history/:idOrder" element={<OrderClientDetails />} />
           <Route path="/listings" element={<Listings />} />
           <Route path="/listings/add-new-listing" element={<AddListing />} />
           <Route path="/dashboard" element={<Dashboard />} />

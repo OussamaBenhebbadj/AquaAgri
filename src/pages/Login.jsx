@@ -45,10 +45,8 @@ const Login = () => {
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400"
           />
 
-          <div className="text-right">
-            <a href="#" className="text-sm text-emerald-600 hover:underline">
-              Forgot your password?
-            </a>
+          <div className="text-right text-emerald-400">
+           <Link to="/login/forgotpassword">Forgot Password ?</Link>
           </div>
 
           <button
